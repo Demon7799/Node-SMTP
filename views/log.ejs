@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <script src="vall.js"></script>
+    <!-- <link rel="stylesheet" href="reg.css"> -->
+    <script>
+        function checkLog(form){
+            if (form.em.value === "test@gmail.com" && form.pw.value === "Asdfg123") {
+                return true;
+            } 
+            else {
+                alert('Wrong Password')
+                return false;   
+            }
+        }
+
+    </script>
+    <style>
+        .cont{
+    font-weight: bold;
+    margin-top: 175px;
+    margin-left: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+    size: 5cm;
+    height:200px; 
+    font-size:14pt; 
+}
+
+.loginbtn{
+    background-color: rgb(78, 78, 244);
+    color: whitesmoke;
+    height:24px; 
+    font-size:14pt;
+}
+
+.loginbtn:hover{
+    opacity: 1;
+    background-color: rgb(15, 15, 91);
+    border-radius: 2px solid black;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <table>
+            <tr>
+                <td>
+                    <form onsubmit="return validate()" action="/success" method="post">
+                        <hr>
+                        <label for="emal">Registered Email</label><br>
+                        <input type="email" id="em" class="box" placeholder="Enter email" name="emal" autocomplete="off"><br><br>
+
+                        <label for="pwd">Password</label><br>
+                        <input type="password" id="pw" class="box" placeholder="Enter password" name="pwd" autocomplete="off"><br><br>
+
+                        <input class="loginbtn" class="box" type="submit" onclick="return checkLog(this.form)" value="Log in">
+                        <hr>
+                </td>
+            </tr>
+            </form>
+        </table>
+    </div>
+</body>
+
+</html>
